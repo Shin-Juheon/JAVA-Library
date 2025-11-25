@@ -18,6 +18,10 @@ public class BookStorage {
         books.add(new Book("노인과바다", "소설", "어니스트 헤밍웨이"));
     }
 
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
     public void addBook(Book book) {
         books.add(book);
     }
