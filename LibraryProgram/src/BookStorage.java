@@ -25,4 +25,16 @@ public class BookStorage {
     public void addBook(Book book) {
         books.add(book);
     }
+
+    public void searchBook(String allType) {
+        System.out.println("분야\t\t책이름\t\t저자\t\t대출상태");
+        for (Book book : books) {
+            if (book.getBookName().contains(allType) ||
+                book.getAuthor().contains(allType) ||
+                book.getCategory().contains(allType)) {
+                book.printResult();
+            }
+        }
+    }
+
 }
