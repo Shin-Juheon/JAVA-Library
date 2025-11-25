@@ -5,5 +5,6 @@ class BookStorageTest {
 
     @Test
     void addBook() {
+        //
     }
 }
