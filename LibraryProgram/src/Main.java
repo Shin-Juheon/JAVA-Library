@@ -1,3 +1,6 @@
+// 도서 관리 프로그램 v1.0
+// https://github.com/Shin-Juheon/JAVA-Library/issues/1
+
 import java.util.Scanner;
 
 public class Main {

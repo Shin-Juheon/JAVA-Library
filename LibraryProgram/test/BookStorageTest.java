@@ -12,6 +12,8 @@ class BookStorageTest {
         inputBook = new Book("홍길동전","소설", "허균");
     }
 
+    // 입력 단위테스트
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/6
     @Test
     void addBook() {
         bookStorage.addBook(inputBook);
