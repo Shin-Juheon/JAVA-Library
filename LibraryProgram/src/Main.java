@@ -31,10 +31,10 @@ public class Main {
                     break;
                 case 3:
                     System.out.print("대출할 책 제목을 입력하세요: ");
-                    String title = sc.nextLine();
-                    storage.borrowBook(title);
+                    String Title = sc.nextLine();
+                    storage.borrowBook(Title);
 
-                    System.out.println(title);
+                    System.out.println(Title);
                     break;
                 case 4:
                     storage.printAllBooks();
@@ -54,5 +54,4 @@ public class Main {
         System.out.println("1. 책 정보 입력\n2. 책 검색하기\n3. 책 대출하기\n4. 전체 출력\n0. 종료");
         System.out.print("메뉴 선택: ");
     }
-//
 }

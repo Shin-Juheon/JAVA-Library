@@ -66,8 +66,7 @@ public class BookStorage {
         }
         System.out.println("찾는 책이 없습니다.");
 
-            }
-
+    }
 
 
     private void printType()
