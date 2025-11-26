@@ -41,7 +41,13 @@ public class BookStorage {
             }
         }
     }
+    // 출력 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/5
+    public void printAllBooks() {
+        System.out.println("분야\t책이름\t저자\t대출상태");
+        for (Book book : books) {
+            book.printResult();
+        }
 
-
-
+    }
 }
