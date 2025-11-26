@@ -22,7 +22,26 @@ public class BookStorage {
         return books;
     }
 
+    // 입력 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/2
     public void addBook(Book book) {
         books.add(book);
     }
+
+    // 검색 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/3
+    public void searchBook(String allType) {
+        System.out.println("분야\t\t책이름\t\t저자\t\t대출상태");
+        for (Book book : books) {
+            if (book.getBookName().contains(allType) ||
+                book.getAuthor().contains(allType) ||
+                book.getCategory().contains(allType)) {
+                book.printResult();
+
+            }
+        }
+    }
+
+
+
 }

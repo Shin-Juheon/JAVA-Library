@@ -1,3 +1,6 @@
+// 도서 관리 프로그램 v1.0
+// https://github.com/Shin-Juheon/JAVA-Library/issues/1
+
 import java.util.Scanner;
 
 public class Main {
@@ -22,6 +25,9 @@ public class Main {
                     System.out.println("책을 등록했습니다.");
                     break;
                 case 2:
+                    System.out.print("검색할(책이름/저자/분야)를 고르시오");
+                    String allType = sc.nextLine();
+                    storage.searchBook(allType);
                     break;
                 case 3:
                     break;
