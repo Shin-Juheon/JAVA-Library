@@ -31,7 +31,7 @@ public class BookStorage {
     // 검색 기능 개발
     // https://github.com/Shin-Juheon/JAVA-Library/issues/3
     public void searchBook(String allType) {
-        System.out.println("분야\t\t책이름\t\t저자\t\t대출상태");
+        printType();
         for (Book book : books) {
             if (book.getBookName().contains(allType) ||
                 book.getAuthor().contains(allType) ||
@@ -44,10 +44,14 @@ public class BookStorage {
     // 출력 기능 개발
     // https://github.com/Shin-Juheon/JAVA-Library/issues/5
     public void printAllBooks() {
-        System.out.println("분야\t책이름\t저자\t대출상태");
+        printType();
         for (Book book : books) {
             book.printResult();
         }
+    }
 
+    private void printType()
+    {
+        System.out.println("분야\t\t\t책이름\t\t\t저자\t\t\t\t대출상태");
     }
 }

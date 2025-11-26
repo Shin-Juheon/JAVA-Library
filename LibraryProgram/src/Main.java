@@ -25,7 +25,7 @@ public class Main {
                     System.out.println("책을 등록했습니다.");
                     break;
                 case 2:
-                    System.out.print("검색할(책이름/저자/분야)를 고르시오");
+                    System.out.print("검색할(책이름/저자/분야)를 적어주세요: ");
                     String allType = sc.nextLine();
                     storage.searchBook(allType);
                     break;
@@ -33,6 +33,7 @@ public class Main {
                     break;
                 case 4:
                     storage.printAllBooks();
+                    break;
                 case 0:
                     System.out.println("종료합니다.");
                     return;

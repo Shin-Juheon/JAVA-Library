@@ -37,7 +37,7 @@ public class Book {
     }
 
     public void printResult() {
-        System.out.printf("%-12s%-28s%-16s%s\n", category, bookName, author, (isBorrowed ? "대출중" : "대출가능"));
+        System.out.printf("%-11s%-14s%-14s%s\n", category, bookName, author, (isBorrowed ? "대출중" : "대출가능"));
     }
 
 }
