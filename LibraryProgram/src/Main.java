@@ -30,6 +30,11 @@ public class Main {
                     storage.searchBook(allType);
                     break;
                 case 3:
+                    System.out.print("대출할 책 제목을 입력하세요: ");
+                    String title = sc.nextLine();
+                    storage.borrowBook(title);
+
+                    System.out.println(title);
                     break;
                 case 4:
                     break;
