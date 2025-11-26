@@ -50,6 +50,26 @@ public class BookStorage {
         }
     }
 
+    //대출 기능 개발
+    //https://github.com/Shin-Juheon/JAVA-Library/issues/4
+    public void borrowBook(String title) {
+        for (Book book : books) {
+            if (book.getBookName().equals(title)) {
+                if (book.isBorrowed()) {
+                    System.out.println("이미 대출중인 책입니다.");
+                } else {
+                    book.borrow();
+                    System.out.println("대출을 완료했습니다.");
+                }
+                return;
+            }
+        }
+        System.out.println("찾는 책이 없습니다.");
+
+            }
+
+
+
     private void printType()
     {
         System.out.println("분야\t\t\t책이름\t\t\t저자\t\t\t\t대출상태");

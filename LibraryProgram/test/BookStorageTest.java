@@ -29,8 +29,14 @@ class BookStorageTest {
         assertDoesNotThrow(() -> bookStorage.searchBook("홍길"));
         assertDoesNotThrow(() -> bookStorage.searchBook("소설"));
         assertDoesNotThrow(() -> bookStorage.searchBook("균"));
-
-
+    }
+    // 대출 단위테스트
+    //https://github.com/Shin-Juheon/JAVA-Library/issues/8
+    @Test
+    void borrowBook() {
+        assertDoesNotThrow(() -> bookStorage.borrowBook("홍길동전"));
+        assertDoesNotThrow(() -> bookStorage.borrowBook("홍길"));
+        assertDoesNotThrow(() -> bookStorage.borrowBook("홍길동전"));
     }
     // 출력 단위테스트
     // https://github.com/Shin-Juheon/JAVA-Library/issues/9
