@@ -32,7 +32,7 @@ public class Main {
                 case 3:
                     break;
                 case 4:
-                    break;
+                    storage.printAllBooks();
                 case 0:
                     System.out.println("종료합니다.");
                     return;
