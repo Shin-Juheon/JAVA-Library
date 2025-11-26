@@ -37,8 +37,11 @@ public class BookStorage {
                 book.getAuthor().contains(allType) ||
                 book.getCategory().contains(allType)) {
                 book.printResult();
+
             }
         }
     }
+
+
 
 }
