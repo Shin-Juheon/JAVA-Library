@@ -36,6 +36,7 @@ class BookStorageTest {
     // https://github.com/Shin-Juheon/JAVA-Library/issues/9
     @Test
     void printAllBooks() {
-        
+        assertFalse(bookStorage.getBooks().isEmpty());
+        bookStorage.printAllBooks();
     }
 }
