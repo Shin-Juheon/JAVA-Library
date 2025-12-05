@@ -1,11 +1,18 @@
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 public class BookStorage {
-    private ArrayList<Book> books = new ArrayList<>();
-
+    private static final String FILE_NAME = "library.csv";
+    private static final ArrayList<Book> books = new ArrayList<>();
 
     public BookStorage() {
+//        loadFromCsv();
+        if (books.isEmpty()) {
+            DefaultBooks();
+        }
+    }
 
+    private void DefaultBooks() {
         books.add(new Book("데미안", "소설", "헤르만 헤세"));
         books.add(new Book("변신", "소설", "프란츠 카프카"));
         books.add(new Book("모모", "소설", "미하엘 엔데"));
@@ -16,7 +23,18 @@ public class BookStorage {
         books.add(new Book("언어의온도", "에세이", "이기주"));
         books.add(new Book("종의기원", "과학", "찰스 다윈"));
         books.add(new Book("노인과바다", "소설", "어니스트 헤밍웨이"));
+        books.add(new Book("어린왕자", "소설", "생텍쥐페리"));
+        books.add(new Book("1984", "소설", "조지 오웰"));
+        books.add(new Book("멋진신세계", "소설", "올더스 헉슬리"));
+        books.add(new Book("코스모스", "과학", "칼 세이건"));
+        books.add(new Book("이기적유전자", "과학", "리처드 도킨스"));
+        books.add(new Book("82년생김지영", "소설", "조남주"));
+        books.add(new Book("살인자의기억법", "소설", "김영하"));
+        books.add(new Book("총균쇠", "역사", "제레드 다이아몬드"));
+        books.add(new Book("사피엔스", "역사", "유발 하라리"));
+        books.add(new Book("나미야잡화점의기적", "소설", "히가시노 게이고"));
     }
+
 
     public ArrayList<Book> getBooks() {
         return books;
