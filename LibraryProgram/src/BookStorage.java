@@ -12,6 +12,8 @@ public class BookStorage {
         }
     }
 
+    // JCF를 이용하여 데이터를 관리하는 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/18
     private void DefaultBooks() {
         books.add(new Book("데미안", "소설", "헤르만 헤세"));
         books.add(new Book("변신", "소설", "프란츠 카프카"));
@@ -55,7 +57,7 @@ public class BookStorage {
                 book.getAuthor().contains(allType) ||
                 book.getCategory().contains(allType)) {
                 book.printResult();
-
+                System.out.println();
             }
         }
     }
