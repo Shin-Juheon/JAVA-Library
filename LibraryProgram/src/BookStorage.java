@@ -35,6 +35,8 @@ public class BookStorage {
         books.add(new Book("총균쇠", "역사", "제레드 다이아몬드"));
         books.add(new Book("사피엔스", "역사", "유발 하라리"));
         books.add(new Book("나미야잡화점의기적", "소설", "히가시노 게이고"));
+        System.out.println("책 20권을 불러왔습니다.");
+        System.out.println();
     }
 
 
@@ -92,5 +94,6 @@ public class BookStorage {
     private void printType()
     {
         System.out.println("분야\t\t\t책이름\t\t\t저자\t\t\t\t대출상태");
+        System.out.println();
     }
 }

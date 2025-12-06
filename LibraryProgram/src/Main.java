@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         BookStorage storage = new BookStorage();
         Scanner sc = new Scanner(System.in);
-        ;
 
         while (true) {
             printMenu();
