@@ -17,15 +17,15 @@ public class Main {
                 case 1:
                     System.out.print("책 이름: ");
                     String name = sc.nextLine();
-                    System.out.print("저자: ");
-                    String author = sc.nextLine();
                     System.out.print("분야: ");
                     String category = sc.nextLine();
+                    System.out.print("저자: ");
+                    String author = sc.nextLine();
                     storage.addBook(new Book(name, category, author));
                     System.out.println("책을 등록했습니다.");
                     break;
                 case 2:
-                    System.out.print("검색할(책이름/저자/분야)를 적어주세요: ");
+                    System.out.print("검색할(책이름/분야/저자)를 적어주세요: ");
                     String allType = sc.nextLine();
                     storage.searchBook(allType);
                     break;
