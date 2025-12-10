@@ -40,10 +40,10 @@ public class Main {
                     storage.printAllBooks();
                     break;
                 case 5:
-//                    storage.saveToCsv();
+                    storage.saveToCsv();
                     break;
                 case 0:
-//                    storage.saveToCsv();
+                    storage.saveToCsv();
                     System.out.println("종료합니다.");
                     sc.close();
                     return;
