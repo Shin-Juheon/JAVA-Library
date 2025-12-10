@@ -3,7 +3,7 @@ import java.util.*;
 
 public class BookStorage {
     private static final String FILE_NAME = "library.csv";
-    private static final ArrayList<Book> books = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
 
     public BookStorage() {
         loadFromCsv();
