@@ -49,7 +49,6 @@ public class BookStorage {
     public void addBook(Book book) {
         books.add(book);
     }
-
     // 검색 기능 개발
     // https://github.com/Shin-Juheon/JAVA-Library/issues/3
     public void searchBook(String allType) {
@@ -71,7 +70,6 @@ public class BookStorage {
             book.printResult();
         }
     }
-
     //대출 기능 개발
     //https://github.com/Shin-Juheon/JAVA-Library/issues/4
     public void borrowBook(String title) {
@@ -87,9 +85,21 @@ public class BookStorage {
             }
         }
         System.out.println("찾는 책이 없습니다.");
-
     }
+    // 저장 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/19
+    public void saveToCsv() {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_NAME))) {
+            pw.write("BookName,Category,Author\n");
 
+            for (Book book : books) {
+                pw.write(book.getBookName() + "," + book.getCategory() + "," + book.getAuthor() + "\n");
+            }
+            System.out.println("저장을 완료했습니다.");
+        } catch (IOException e) {
+            System.out.println("저장 오류: " + e.getMessage());
+        }
+    }
     // 불러오기 기능 개발
     // https://github.com/Shin-Juheon/JAVA-Library/issues/20
     private void loadFromCsv() {
@@ -121,19 +131,5 @@ public class BookStorage {
     {
         System.out.println("분야\t\t\t책이름\t\t\t저자\t\t\t\t대출상태");
         System.out.println();
-    }
-    // 저장 기능 개발
-    // https://github.com/Shin-Juheon/JAVA-Library/issues/19
-    public void saveToCsv() {
-        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_NAME))) {
-            pw.write("BookName,Category,Author\n");
-
-            for (Book book : books) {
-                pw.write(book.getBookName() + "," + book.getCategory() + "," + book.getAuthor() + "\n");
-            }
-            System.out.println("저장을 완료했습니다.");
-        } catch (IOException e) {
-            System.out.println("저장 오류: " + e.getMessage());
-        }
     }
 }
