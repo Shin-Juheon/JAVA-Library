@@ -6,7 +6,7 @@ public class BookStorage {
     private static final ArrayList<Book> books = new ArrayList<>();
 
     public BookStorage() {
-//        loadFromCsv();
+        loadFromCsv();
         if (books.isEmpty()) {
             DefaultBooks();
         }
@@ -88,6 +88,32 @@ public class BookStorage {
         }
         System.out.println("찾는 책이 없습니다.");
 
+    }
+
+    // 불러오기 기능 개발
+    // https://github.com/Shin-Juheon/JAVA-Library/issues/20
+    private void loadFromCsv() {
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            boolean isHeader = true;
+
+            while ((line = br.readLine()) != null) {
+                if (isHeader) {
+                    isHeader = false;
+                    continue;
+                }
+                String[] data = line.split(",");
+
+                if (data.length < 3) continue;
+
+                books.add(new Book(data[0], data[1], data[2]));
+            }
+            System.out.println("파일 불러오기를 완료했습니다. (" + books.size() + "권)");
+        } catch (FileNotFoundException e) {
+            System.out.println("CSV 파일이 없습니다.");
+        } catch (IOException e) {
+            System.out.println("저장 오류: " + e.getMessage());
+        }
     }
 
 
